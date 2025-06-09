@@ -1,3 +1,4 @@
+import time
 import pytest
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
@@ -7,6 +8,7 @@ def test_add_to_basket_button_exists(browser):
     link = "https://selenium1py.pythonanywhere.com/" \
        "catalogue/coders-at-work_207/"
     browser.get(link)
+    time.sleep(10)
 
     try:
         add_to_basket_button = browser.find_element(
