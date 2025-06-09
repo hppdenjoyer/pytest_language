@@ -1,0 +1,49 @@
+# Общие файлы
+.DS_Store
+*.log
+*.swp
+*.swo
+*.bak
+*.tmp
+*.cache
+*.pid
+*.seed
+*.pid.lock
+
+# Директории
+/node_modules/
+/.idea/
+/.vscode/
+/.vs/
+/bin/
+/dist/
+/build/
+/out/
+/target/
+/.env
+/.venv/
+/venv/
+/env/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Логи и базы данных
+*.log
+*.sql
+*.sqlite
+
+# Кэш и зависимости
+.cache/
+*.gem
+*.pyc
+__pycache__/
+*.class
+*.jar
+*.war
+
+# Системные файлы
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
