@@ -7,7 +7,9 @@ def pytest_addoption(parser):
     parser.addoption('--browser_name', action='store', default="chrome",
                      help="Choose browser: chrome or firefox")
     parser.addoption('--language', action='store', default="ru",
-                     help="Choose language: ru, de, es, it, en-gb")
+                     help="Choose language: ar, ca, cs, da, de, en-gb, el,"
+                          "es, fi, fr, it, ko, nl, pl, pt, pt-br, ro, ru, sk,"
+                          "uk, zh-cn")
 
 
 @pytest.fixture(scope="function")
@@ -18,7 +20,9 @@ def browser(request):
     if browser_name == "chrome":
         print("\nstart chrome browser for test..")
         options = Options()
-        options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
+        options.add_experimental_option(
+            'prefs', {'intl.accept_languages': user_language}
+        )
         browser = webdriver.Chrome(options=options)
     elif browser_name == "firefox":
         print("\nstart firefox browser for test..")
